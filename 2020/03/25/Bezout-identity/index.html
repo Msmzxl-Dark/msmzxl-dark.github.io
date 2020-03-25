@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="裴蜀（贝祖）定理证明及其应用 定理描述：在数论中，裴蜀定理是一个关于最大公约数（或最大公约式）的定理.裴蜀定理说明了对任何整数$a, b$和它们的最大公约数$d$，关于未知数$x$和$y$的线性丢番图方程（称为裴蜀等式）.若$a, b$是整数,且$gcd(a, b) &#x3D; d$，那么对于任意的整数$x, y, ax + by$都一定是$d$的倍数，特别地，一定存在整数$x, y$使得$ax + by">
+  <meta name="description" content="裴蜀（贝祖）定理证明及其应用 定理描述：在数论中，裴蜀定理是一个关于最大公约数（或最大公约式）的定理.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bézout-identity">
 <meta property="og:url" content="http://yoursite.com/2020/03/25/Bezout-identity/index.html">
 <meta property="og:site_name" content="Msmzxl-dark&#39;s blog">
-<meta property="og:description" content="裴蜀（贝祖）定理证明及其应用 定理描述：在数论中，裴蜀定理是一个关于最大公约数（或最大公约式）的定理.裴蜀定理说明了对任何整数$a, b$和它们的最大公约数$d$，关于未知数$x$和$y$的线性丢番图方程（称为裴蜀等式）.若$a, b$是整数,且$gcd(a, b) &#x3D; d$，那么对于任意的整数$x, y, ax + by$都一定是$d$的倍数，特别地，一定存在整数$x, y$使得$ax + by">
+<meta property="og:description" content="裴蜀（贝祖）定理证明及其应用 定理描述：在数论中，裴蜀定理是一个关于最大公约数（或最大公约式）的定理.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-25T03:38:47.000Z">
-<meta property="article:modified_time" content="2020-03-25T04:14:37.244Z">
+<meta property="article:modified_time" content="2020-03-25T04:25:05.165Z">
 <meta property="article:author" content="Msmzxl">
 <meta name="twitter:card" content="summary">
 
@@ -180,7 +180,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-03-25 11:38:47 / Modified: 12:14:37" itemprop="dateCreated datePublished" datetime="2020-03-25T11:38:47+08:00">2020-03-25</time>
+              <time title="Created: 2020-03-25 11:38:47 / Modified: 12:25:05" itemprop="dateCreated datePublished" datetime="2020-03-25T11:38:47+08:00">2020-03-25</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -204,15 +204,14 @@
 
       
         <h1 id="裴蜀（贝祖）定理证明及其应用"><a href="#裴蜀（贝祖）定理证明及其应用" class="headerlink" title="裴蜀（贝祖）定理证明及其应用"></a>裴蜀（贝祖）定理证明及其应用</h1><hr>
-<h2 id="定理描述："><a href="#定理描述：" class="headerlink" title="定理描述："></a>定理描述：</h2><p>在数论中，裴蜀定理是一个关于最大公约数（或最大公约式）的定理.<br>裴蜀定理说明了对任何整数$a, b$和它们的最大公约数$d$，关于未知数$x$和$y$的线性丢番图方程（称为裴蜀等式）.<br>若$a, b$是整数,且$gcd(a, b) = d$，那么对于任意的整数$x, y, ax + by$都一定是$d$的倍数，特别地，一定存在整数$x, y$使得$ax + by = d$成立.</p>
+<h2 id="定理描述："><a href="#定理描述：" class="headerlink" title="定理描述："></a>定理描述：</h2><p>在数论中，裴蜀定理是一个关于最大公约数（或最大公约式）的定理.<br><a id="more"></a><br>裴蜀定理说明了对任何整数$a, b$和它们的最大公约数$d$，关于未知数$x$和$y$的线性丢番图方程（称为裴蜀等式）.<br>若$a, b$是整数,且$gcd(a, b) = d$，那么对于任意的整数$x, y, ax + by$都一定是$d$的倍数，特别地，一定存在整数$x, y$使得$ax + by = d$成立.</p>
 <script type="math/tex; mode=display">a \cdot x + b \cdot y = d</script><p>当且仅当$m$为$d$的倍数.<br>顺便提及，若$x = x_0$,$y = y_0$ 是满足上式的一对整数，则等式</p>
 <script type="math/tex; mode=display">a(x_0+b \cdot u)+b(y_0-a \cdot u)=(a,b) (u 为任意整数)</script><p>表明，满足上式的$x,y$有无穷多组；并且，在$ab&gt;0$时，可选$x$为正（负）数，此时$y$则相应地为负（正）数.</p>
 <h2 id="证明："><a href="#证明：" class="headerlink" title="证明："></a>证明：</h2><p>由$ax+by=m$ 易推出下面的：<br>两个整数$a, b$互素的充分必要条件是存在整数$x, y$，使得</p>
 <script type="math/tex; mode=display">a \cdot x + b \cdot y = 1</script><p>事实上，条件的必要性是$ax+by=m$的特例.反过来，若有$x,y$使等式成立，设$(a,b)=d$，则$d\mid a$且$d\mid b$，故$d\mid ax$及$d\mid by$，于是$d\mid (ax+by)$，即$d\mid 1$，从而$d=1$.</p>
 <h1 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h1><ul>
-<li>对任意整数$n$，证明分数$\frac {21n+4}{14n+3}$是既约分数.<br>证明： 问题即要证明$21n+4$与$14n+3$互素，易知这两数适合裴蜀等式</li>
+<li>对任意整数$n$，证明分数$\frac {21n+4}{14n+3}$是既约分数.<br>  证明： 问题即要证明$21n+4$与$14n+3$互素，易知这两数适合裴蜀等式<script type="math/tex; mode=display">3(14n+3)-2(21n+4)=1</script>因此所说的结论成立.</li>
 </ul>
-<script type="math/tex; mode=display">3(14n+3)-2(21n+4)=1</script><p>因此所说的结论成立.</p>
 <h1 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h1><h2 id="洛谷4549"><a href="#洛谷4549" class="headerlink" title="洛谷4549"></a>洛谷4549</h2><p>给定一个序列${an}$，求一个整数序列${bn}$使得$a_1 \cdot b_1+a_2 \cdot b_2+…+a_n \cdot b_n$值最小（要求最小值为正数），求这个最小值.</p>
 <p>根据裴蜀定理的推广，原式最小值即为$gcd(a_1,a_2,…,a_n)$.</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n, x, ans = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">return</span> gcd(b, a % b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">        x = <span class="built_in">abs</span>(x);</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        ans = gcd(x, ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
